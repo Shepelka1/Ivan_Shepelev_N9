@@ -18,6 +18,19 @@ namespace DataLayer
         private Client Client { get; set; }
         public Restaurant()
         {
+            Reservations = new List<Reservation>();
+        }
+
+        public Restaurant(int restaurantId, string address, decimal yearlyIncome) : this()
+        {
+            RestaurantId = restaurantId;
+            Address = address;
+            YearlyIncome = yearlyIncome;
+        }
+        public Restaurant(string address, decimal yearlyIncome) : this()
+        {
+            Address = address;
+            YearlyIncome = yearlyIncome;
         }
     }
 }

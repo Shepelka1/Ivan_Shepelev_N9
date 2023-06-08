@@ -20,5 +20,17 @@ namespace DataLayer
         {
             Reservations = new List<Reservation>();
         }
+
+        public Client(int clientId, string name, int age) : this()
+        {
+            ClientId = clientId;
+            Name = name;
+            Age = age;
+        }
+        public Client(string name, int age) : this()
+        {
+            Name = name;
+            Age = age;
+        }
     }
 }
